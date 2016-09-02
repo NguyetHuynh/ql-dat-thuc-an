@@ -27,7 +27,7 @@
 					<legend>Đăng Nhập</legend>
 				
 					<div class="form-group">
-						<label for="">Tên đăng nhập</label>
+						<label for="">Mã nhân viên</label>
 						<input type="text" class="form-control" id="" placeholder="Tên đăng nhập" required>
 					</div>
 				
