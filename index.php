@@ -28,7 +28,7 @@
 				
 					<div class="form-group">
 						<label for="">Mã nhân viên</label>
-						<input type="text" class="form-control" id="" placeholder="Tên đăng nhập" required>
+						<input type="text" class="form-control" id="" placeholder="Mã nhân viên" required>
 					</div>
 				
 					<div class="form-group">
