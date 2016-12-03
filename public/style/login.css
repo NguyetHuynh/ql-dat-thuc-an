@@ -1,0 +1,18 @@
+body{
+	background-color: #464545
+}
+h1, footer{
+	color:#fff;
+}
+.center-form{
+	background-color:#fff;
+	border-radius: 5px;
+	padding: 50px;
+}
+.form-error{
+    color: #F70505;
+    padding-top: 5px;
+}
+footer{
+
+}

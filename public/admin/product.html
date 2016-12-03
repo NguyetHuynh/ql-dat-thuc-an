@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashbroad - Product</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="style/style.css"/> -->
+    <!-- <link rel="stylesheet" href="style/reset.css"> -->
+    <link rel="stylesheet" href="../style/main.css">
+</head>
+<body>    
+    <div class="">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 left-col ">
+                    <div class="profile">
+                        <p>Xin chào, admin</p>
+                        <p>Nguyệt Huỳnh</p>
+                    </div>
+                    <ul id="primary-menu">
+                        <li class="menu-item">
+                            <a href="#">
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                                <span class="menu-title">Home</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <span class="menu-title">Quản Lý Thực Đơn</span>
+                                <i class="fa fa-chevron-down show-sub" aria-hidden="true"></i>
+                            </a>
+                            <ul class="submenu">
+                                <li><a href="">Xem Danh Sách Món</a></li>
+                                <li><a href="">Thêm Thức Ăn</a></li>
+                                <li><a href="">Loại Thức Ăn</a></li>
+                                <li><a href="">Hình Thức Phục Vụ</a></li>
+                                <li><a href="">Đơn Vị Tính</a></li>
+                            </ul>            
+                        </li>
+                        <li class="menu-item">
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-money" aria-hidden="true"></i>
+                                 Quản Lý Hóa Đơn
+                                <i class="fa fa-chevron-down show-sub" aria-hidden="true"></i>
+                            </a>
+                            <ul class="submenu">
+                                <li><a href="">Xem Hóa Đơn</a></li>
+                                <li><a href="">Thêm Hóa Đơn</a></li>
+                            </ul>   
+                        </li>
+                        <li class="menu-item">
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-bar-chart"> </i>
+                                <span>Xem Thống Kê</span>
+                                <i class="fa fa-chevron-down show-sub" aria-hidden="true"></i>
+                            </a>
+                            <ul class="submenu">
+                                <li><a href="">Doanh Thu</a></li>
+                                <li><a href="">Giao Hàng</a></li>
+                                <li><a href="">Đặt Bàn</a></li>
+                            </ul>  
+                        </li>
+                        <li class="menu-item">
+                            <a href="view/table.php">
+                                <i class="fa fa-list" aria-hidden="true"></i>
+                                 Quản Lý Bàn
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <span class="menu-title">Nhân Viên</span>
+                                <i class="fa fa-chevron-down show-sub" aria-hidden="true"></i>
+                            </a>
+                            <ul class="submenu">
+                                <li><a href="">Danh Sách Viên</a></li>
+                                <li><a href="">Danh Sách Chức Vụ</a></li>
+                            </ul>   
+                        </li>
+                    </ul>
+                </div><!--.left-col-->
+                <div class="col-md-10 right-col">
+                    <header>
+                        <div class="navbar">
+                            <div class="container-fluid">
+                                <div class="nav navbar-nav navbar-right">
+                                    <a href="logout.html"><i class="fa fa-sign-out" aria-hidden="true"></i> Đăng Xuất</a>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <div class="title">
+                        <div class="container">
+                            <div class="">
+                                <h2>Quản Lý Menu</h2>
+                                <p>Danh Sách Thức Ăn, Nước  Uống</p>
+                            </div>
+                            <div class="act-control">
+                                <a href="addMenu.html">
+                                    <button type="button" class="btn btn-primary">Thêm Mới</button>
+                                    <button type="button" class="btn btn-primary">Xem Danh Sách</button>
+                                </a>                                                    
+                            </div>
+                        </div>    
+                        <div class="line"></div>                
+                    </div><!--title-->
+                    <div class="container">
+                        <div class="alert alert-success message">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong>Success!</strong> Thêm Mới Thành Công.
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 tb-data panel">
+                                <table id="dataTable" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                                    <caption>Danh Sách Thức Ăn, Nước Uống</caption>
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Mã số</th>
+                                            <th>Tên</th>
+                                            <th>Đơn Giá</th>
+                                            <th>Ngày Tạo</th>
+                                            <th>Hành Động</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="checkbox" name="id[]"></td>
+                                            <td>1</td>
+                                            <td>Salad xoài</td>
+                                            <td>20.000 VND</td>
+                                            <td>5/10/206</td>
+                                            <td class="act-list">
+                                                <a href="#" data-toggle="tooltip" title="Xem chi tiết"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                                                <a href="#" data-toggle="tooltip" title="Chỉnh sửa"><i class="fa fa-wrench" aria-hidden="true"></i></a>
+                                                <a href="#" data-toggle="tooltip" title="Xóa"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                            </td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div><!--.tb-data-->
+                        </div>
+                    </div><!--.content-->
+                </div><!--.right-col-->
+            </div><!--t row-->
+        </div>
+        <div class="clearfix"></div>
+        
+    </div>
+    <footer class="footer">
+            <div class="container">
+                <p>&copy; Nguyet Huynh 2016</p>
+            </div>
+        </footer>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+    <script src="../script/jquery.number.min.js"></script>
+    <script src="../script/main-script.js"></script>
+</body>
+</html>

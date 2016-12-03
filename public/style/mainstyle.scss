@@ -1,0 +1,189 @@
+/*variable*/
+$menu-bgColor : rgb(38,33,31);
+$menu-hover: #2F2D2D;
+$menu-txt: #F5F4F4;
+$important: #F70505;
+/*General*/
+/*prevent increasing size after padding*/
+*{
+    box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing: border-box;
+    margin:0px;
+    padding:0px;
+}
+html{
+    position:relative;
+}
+body{
+    padding:0px;
+    margin:0px;
+    background-color: $menu-bgColor;
+}
+h1, h2, h3, h4, h5, h6, p, a{
+    font-family: arial, sans-serif;
+}
+p,a{
+    font-size: 1.2em;
+}
+.container{
+    width:100%;
+}
+.nopadding{
+    padding: 0 ;
+    margin: 0 ;
+}
+.required{
+    color: $important;
+    font-size: 1.2em;
+}
+.note{
+    font-style:italic;
+    font-size: 0.9em;
+    padding-left: 20px;
+}
+.form-error{
+    color: $important;
+    padding-top: 5px;
+}
+/*remove gutter between columns*/
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+a, a:hover, a:link, a:active, a:visited{
+    text-decoration: none;
+}
+/*main*/
+#main{
+    // height: 100vh;
+}
+header{
+    margin: 0px -20px;
+    .nav{
+        padding-right:40px;
+    }
+}
+header, footer, .left-col{
+    background-color: $menu-bgColor;
+}
+header, footer, .left-col{
+    // margin-left: 15px;
+    // padding:0px;
+	p, a{
+        color: $menu-txt;
+    }
+    .navbar{
+        padding-top:10px;
+        a{
+            &:hover{
+                color:#00FFF6;
+            }
+        }
+    }
+    .navbar-right a{
+        margin-top:10px;
+    }
+    ul{
+        text-indent: 5px;
+        margin:0px;
+        li{
+            list-style: none;
+        }
+        a, li{
+            &:hover{
+            background-color: $menu-hover;
+            }   
+        }
+        .show-sub{
+            font-size: 0.5em;
+            color: $menu-txt;
+            float:right;
+            margin-top: 20px;
+        }
+    } 
+    .submenu{ /*keo ul con ra ngoai*/
+        display: none;//phai co display none thi moi slideDown duoc
+        margin:0px;
+        padding: 0px;
+    }
+    .activing .submenu{
+    background-color: rgb(84, 73, 68);
+}
+}
+/*left col*/
+.left-col{
+    height: 100vh;
+    ul{
+    padding:0px; //remove indent(thut dau dong) for list items
+    line-height: 50px;//tranh bi ul con noi len tren ul cha + tao khoang cach giua cac li
+    // margin:-10px;
+    }
+    .profile{
+        margin:0px;
+        padding:20px;
+        border-bottom: 3px ridge $menu-hover;
+    }
+}
+/*right-col*/
+.right-col{
+    background-color: #F3F3F3;
+    padding-bottom: 50px;
+    .line{
+        height: 5px;
+        background-color:#ddd;
+   }
+   .right-col-content{
+    // margin: 10px;
+    // padding: 10px;
+   }
+   .message{
+    margin-top:20px;
+   }
+   table{
+    caption{
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+   }
+    .panel{
+        margin: 20px 0px;
+        padding: 5px;
+        background-color:#fff;
+   }
+   .act-list{        
+        .fa{
+            margin-right: 30px;
+        }
+        font-size: 1.2em;
+        .fa-wrench{
+            color: #000;
+        }
+        .fa-trash{
+            color:#F50808;
+        }
+   }
+   .act-control{
+        margin-top:-50px;
+        margin-right: 60px;
+        float:right;
+    }
+    form{
+        margin:20px;
+        padding: 20px;
+    }
+    .btn-form{
+        padding-right:30px;
+    }
+}
+
+footer{
+    // margin-left:-14px;
+    // margin-right:-14px;
+    bottom:0px;
+    clear:both;
+    p{
+        text-align: center;
+        padding: 10px 0px;
+    }    
+}

@@ -1,0 +1,142 @@
+/*variable*/
+/*General*/
+/*prevent increasing size after padding*/
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0px;
+  padding: 0px; }
+
+html {
+  position: relative; }
+
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: #26211f; }
+
+h1, h2, h3, h4, h5, h6, p, a {
+  font-family: arial, sans-serif; }
+
+p, a {
+  font-size: 1.2em; }
+
+.container {
+  width: 100%; }
+
+.nopadding {
+  padding: 0;
+  margin: 0; }
+
+.required {
+  color: #F70505;
+  font-size: 1.2em; }
+
+.note {
+  font-style: italic;
+  font-size: 0.9em;
+  padding-left: 20px; }
+
+.form-error {
+  color: #F70505;
+  padding-top: 5px; }
+
+/*remove gutter between columns*/
+.no-gutter > [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0; }
+
+a, a:hover, a:link, a:active, a:visited {
+  text-decoration: none; }
+
+/*main*/
+header {
+  margin: 0px -20px; }
+  header .nav {
+    padding-right: 40px; }
+
+header, footer, .left-col {
+  background-color: #26211f; }
+
+header p, header a, footer p, footer a, .left-col p, .left-col a {
+  color: #F5F4F4; }
+header .navbar, footer .navbar, .left-col .navbar {
+  padding-top: 10px; }
+  header .navbar a:hover, footer .navbar a:hover, .left-col .navbar a:hover {
+    color: #00FFF6; }
+header .navbar-right a, footer .navbar-right a, .left-col .navbar-right a {
+  margin-top: 10px; }
+header ul, footer ul, .left-col ul {
+  text-indent: 5px;
+  margin: 0px; }
+  header ul li, footer ul li, .left-col ul li {
+    list-style: none; }
+  header ul a:hover, header ul li:hover, footer ul a:hover, footer ul li:hover, .left-col ul a:hover, .left-col ul li:hover {
+    background-color: #2F2D2D; }
+  header ul .show-sub, footer ul .show-sub, .left-col ul .show-sub {
+    font-size: 0.5em;
+    color: #F5F4F4;
+    float: right;
+    margin-top: 20px; }
+header .submenu, footer .submenu, .left-col .submenu {
+  /*keo ul con ra ngoai*/
+  display: none;
+  margin: 0px;
+  padding: 0px; }
+header .activing .submenu, footer .activing .submenu, .left-col .activing .submenu {
+  background-color: #544944; }
+
+/*left col*/
+.left-col {
+  height: 100vh; }
+  .left-col ul {
+    padding: 0px;
+    line-height: 50px; }
+  .left-col .profile {
+    margin: 0px;
+    padding: 20px;
+    border-bottom: 3px ridge #2F2D2D; }
+
+/*right-col*/
+.right-col {
+  background-color: #F3F3F3;
+  padding-bottom: 50px; }
+  .right-col .line {
+    height: 5px;
+    background-color: #ddd; }
+  .right-col .message {
+    margin-top: 20px; }
+  .right-col table caption {
+    font-weight: bold;
+    font-size: 1.2em; }
+  .right-col .panel {
+    margin: 20px 0px;
+    padding: 5px;
+    background-color: #fff; }
+  .right-col .act-list {
+    font-size: 1.2em; }
+    .right-col .act-list .fa {
+      margin-right: 30px; }
+    .right-col .act-list .fa-wrench {
+      color: #000; }
+    .right-col .act-list .fa-trash {
+      color: #F50808; }
+  .right-col .act-control {
+    margin-top: -50px;
+    margin-right: 60px;
+    float: right; }
+  .right-col form {
+    margin: 20px;
+    padding: 20px; }
+  .right-col .btn-form {
+    padding-right: 30px; }
+
+footer {
+  bottom: 0px;
+  clear: both; }
+  footer p {
+    text-align: center;
+    padding: 10px 0px; }
+
+/*# sourceMappingURL=main.css.map */
